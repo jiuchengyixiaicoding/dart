@@ -1,18 +1,28 @@
-//Dart 支持常用的流程控制语句：
-if (year >= 2001) {
-  print('21st century');
-} else if (year >= 1901) {
-  print('20th century');
-}
+void main() {
+  String name = 'Voyager I';
+  int year = 1977;
+  double antennaDiameter = 3.7;
+  List flybyObjects = ['Jupiter', 'Saturn', 'Uranus', 'Neptune'];
+  Map image = {
+    'tags': ['saturn'],
+    'url': '//path/to/saturn.jpg',
+  };
 
-for (final object in flybyObjects) {
-  print(object);
-}
+  if (year >= 2001) {
+    print('21st century');
+  } else if (year >= 1901) {
+    print('20th century');
+  }
 
-for (int month = 1; month <= 12; month++) {
-  print(month);
-}
+  for (final object in flybyObjects) {
+    print(object);
+  }
 
-while (year < 2016) {
-  year += 1;
+  for (int month = 1; month <= 12; month++) {
+    print(month);
+  }
+
+  while (year < 2016) {
+    year += 1;
+  }
 }
