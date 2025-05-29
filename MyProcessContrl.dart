@@ -1,12 +1,7 @@
 void main() {
-  String name = 'Voyager I';
   int year = 1977;
-  double antennaDiameter = 3.7;
   List flybyObjects = ['Jupiter', 'Saturn', 'Uranus', 'Neptune'];
-  Map image = {
-    'tags': ['saturn'],
-    'url': '//path/to/saturn.jpg',
-  };
+  
 
   if (year >= 2001) {
     print('21st century');
