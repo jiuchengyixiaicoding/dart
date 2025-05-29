@@ -1,24 +1,19 @@
-/**
- * 下面的示例中向你展示了一个包含三个属性、两个构造函数以及一个方法的类。其中一个属性不能直接赋值，因此它被定义为一个 getter 方法（而不是变量）。该方法使用字符串插值来打印字符串文字内变量的字符串。
- */
-class Spacecraft {
+class Bomb {
   String name;
   DateTime? launchDate;
-
-  // Read-only non-final property
+  // 返回launchDate的year字段（若存在）或null
   int? get launchYear => launchDate?.year;
 
-  // Constructor, with syntactic sugar for assignment to members.
-  Spacecraft(this.name, this.launchDate) {
+  Bomb(this.name, this.launchDate) {
     // Initialization code goes here.
   }
 
-  // Named constructor that forwards to the default one.
-  Spacecraft.unlaunched(String name) : this(name, null);
+  // 接收name参数，转发给主构造函数并设置launchDate为null
+  Bomb.unlaunched(String name) : this(name, null);
 
-  // Method.
+  // 方法定义：输出对象信息
   void describe() {
-    print('Spacecraft: $name');
+    print('Bomb: $name');
     // Type promotion doesn't work on getters.
     var launchDate = this.launchDate;
     if (launchDate != null) {
@@ -30,8 +25,10 @@ class Spacecraft {
   }
 }
 
-var voyager = Spacecraft('Voyager I', DateTime(1977, 9, 5));
-voyager.describe();
+void main() {
+var Boy = Bomb('Little Boy', DateTime(1945, 8, 6));
+Boy.describe();
 
-var voyager3 = Spacecraft.unlaunched('Voyager III');
-voyager3.describe();
+var Qiu = Bomb.unlaunched('Miss Qiu');
+Qiu.describe();
+}
